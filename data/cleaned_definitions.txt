@@ -1,0 +1,372 @@
+* **Algorithm**: A **sequence of unambiguous instructions** for solving a problem, i.e., for obtaining a required output for any legitimate input in a finite amount of time.
+* **Algorithmics**: The **theoretical study of algorithms**, which is considered the cornerstone of computer science.
+* **Euclid’s Algorithm**: A method for computing the **greatest common divisor** of two integers based on the repeated application of the equality $gcd(m, n) = gcd(n, m \text{ mod } n)$ until the remainder is zero.
+* **Sieve of Eratosthenes**: An algorithm used to generate **consecutive prime numbers** not exceeding a specified integer $n > 1$.
+* **Floor Function**: Denoted as $\lfloor x \rfloor$, this function rounds a real number down to the **nearest integer**.
+* **Instance**: An input to an algorithm that specifies a **particular case** of the problem the algorithm is intended to solve.
+* **Random-Access Machine (RAM)**: A computer architecture model where instructions are executed **sequentially**, one operation at a time.
+* **Sequential Algorithm**: An algorithm designed to be executed on a **RAM model** computer.
+* **Parallel Algorithm**: An algorithm designed to take advantage of devices that can execute operations **concurrently**.
+* **Exact Algorithm**: An algorithm developed to solve a problem **precisely**.
+* **Approximation Algorithm**: An algorithm developed to solve a problem **approximately**, often used for problems that are too complex to solve exactly in a reasonable timeframe.
+* **Algorithm Design Technique**: A **general approach** to solving problems algorithmically that can be applied to many different areas of computing.
+* **Pseudocode**: A succinct **mixture of natural language and programming constructs** used to describe an algorithm.
+* **Flowchart**: A method of representing an algorithm using **connected geometric shapes** containing descriptions of steps.
+* **Correctness**: The requirement that an algorithm must yield the **required result** for every legitimate input within a finite amount of time.
+* **Time Efficiency**: Also called time complexity, this indicates **how fast** an algorithm runs.
+* **Space Efficiency**: Also called space complexity, this refers to the amount of **extra memory** an algorithm requires.
+* **Generality**: A characteristic concerning the **breadth of the problem** an algorithm solves and the range of inputs it accepts.
+* **Optimality**: The **minimum amount of effort** required by any algorithm to solve a particular problem.
+* **Sorting**: The process of rearranging items in a list into **non-decreasing order**.
+* **Key**: A specially chosen piece of information used to **identify or order records** in sorting or searching.
+* **Stable Sorting**: A sorting algorithm property where the **relative order** of equal elements from the input is preserved in the output.
+* **In-place Algorithm**: An algorithm that requires **no extra memory** except for perhaps a few memory units.
+* **Searching**: The problem of finding a specific **search key** within a given set or multiset.
+* **String**: A sequence of **characters** from a defined alphabet.
+* **String Matching**: The task of finding an occurrence of a **specific word** within a larger text.
+* **Graph**: A collection of points called **vertices** connected by line segments called **edges**.
+* **Traveling Salesman Problem (TSP)**: The task of finding the **shortest tour** through $n$ cities that visits each city exactly once.
+* **Graph-Coloring Problem**: The task of assigning the **smallest number of colors** to a graph's vertices so that no two adjacent vertices share the same color.
+* **Combinatorial Problems**: Problems that require finding a **combinatorial object**, such as a permutation or subset, that satisfies specific constraints.
+* **Geometric Algorithms**: Algorithms that deal with **geometric objects** such as points, lines, and polygons.
+* **Closest-Pair Problem**: The task of finding the **two closest points** in a set of $n$ points.
+* **Convex-Hull Problem**: The task of finding the **smallest convex polygon** that contains all points in a given set.
+* **Numerical Problems**: Problems involving mathematical objects of a **continuous nature**, such as solving equations or computing integrals.
+* **Data Structure**: A specific scheme for **organizing related data items**.
+* **Array**: A sequence of $n$ items of the same type stored **contiguously** in memory and accessed by an **index**.
+* **Linked List**: A sequence of zero or more **nodes**, each containing data and one or more **pointers** to other nodes.
+* **Stack**: A list where insertions and deletions occur only at one end called the **top**, operating on a **Last-In-First-Out (LIFO)** basis.
+* **Queue**: A list where items are added at the **rear** and removed from the **front**, operating on a **First-In-First-Out (FIFO)** basis.
+* **Priority Queue**: A collection of data items where the principal operations are finding, adding, and deleting the **item with the highest priority**.
+* **Heap**: A data structure often used to implement **priority queues**.
+* **Directed Graph (Digraph)**: A graph where every edge has an assigned **direction**.
+* **Weighted Graph**: A graph where edges are assigned **numerical values** known as weights or costs.
+* **Connected Graph**: A graph where a **path** exists between every pair of vertices.
+* **Cycle**: A path that starts and ends at the **same vertex** without traversing the same edge more than once.
+* **Tree (Free Tree)**: A **connected acyclic graph**.
+* **Rooted Tree**: A tree where one vertex is designated as the **root**.
+* **Leaf**: A vertex in a rooted tree that has **no children**.
+* **Binary Tree**: An ordered tree where each vertex has at most **two children**, designated as left and right.
+* **Binary Search Tree**: A binary tree where the key in each parental node is **larger than keys in its left subtree** and **smaller than keys in its right subtree**.
+* **Set**: An unordered collection of **distinct items** called elements.
+* **Dictionary**: A data structure that implements **searching, adding, and deleting** items from a set.
+* **Abstract Data Type (ADT)**: A set of abstract objects with a **defined collection of operations** that can be performed on them.
+* **Time Efficiency (Time Complexity)**: A measure indicating **how fast** a specific algorithm runs.
+* **Space Efficiency (Space Complexity)**: The **amount of memory** units required by an algorithm, in addition to the space needed for its input and output.
+* **Input Size**: A parameter $n$ indicating the **magnitude of the input** (e.g., number of elements in a list or bits in a number), which typically determines how long an algorithm runs.
+* **Basic Operation**: The **most important operation** of an algorithm, usually located in its innermost loop, which contributes the most to the total running time.
+* **Order of Growth**: A measurement of how an algorithm's requirement for a resource (usually time) increases as the **input size goes to infinity**, ignoring multiplicative constants.
+* **Worst-Case Efficiency**: The efficiency for an input of size $n$ for which the algorithm **runs the longest** among all possible inputs of that size.
+* **Best-Case Efficiency**: The efficiency for an input of size $n$ for which the algorithm **runs the fastest** among all possible inputs of that size.
+* **Average-Case Efficiency**: An estimation of an algorithm's behaviour on a **"typical" or "random" input**, found by calculating the expected value of the basic operation's count under specific probabilistic assumptions.
+* **Amortized Efficiency**: Efficiency applied to a **sequence of operations** performed on the same data structure, where a single expensive operation is offset by many inexpensive ones.
+* **$O(g(n))$ (Big-oh notation)**: The set of all functions with a **lower or same order of growth** as $g(n)$; it provides an **asymptotic upper bound**.
+* **$\Omega(g(n))$ (Big-omega notation)**: The set of all functions with a **higher or same order of growth** as $g(n)$; it provides an **asymptotic lower bound**.
+* **$\Theta(g(n))$ (Big-theta notation)**: The set of all functions that have the **same order of growth** as $g(n)$; it provides an **asymptotic tight bound**.
+* **Little-oh notation ($o$)**: Used when a function has a **strictly smaller order of growth** than another function.
+* **Recurrence Relation (Recurrence)**: An equation that defines a sequence **implicitly** as a function of its value at earlier points.
+* **Initial Condition**: An explicit value for the **starting term(s)** of a sequence needed to solve a recurrence relation uniquely.
+* **Method of Backward Substitutions**: A technique for solving recurrences by repeatedly replacing terms with their definitions until a **pattern emerges** or the initial condition is reached.
+* **Smoothness Rule**: A theorem claiming that the order of growth observed for $n$ as powers of $b$ generally provides the **correct answer for all values of $n$** under broad assumptions.
+* **Fibonacci Numbers**: A sequence where every element (after the first two) is the **sum of its two immediate predecessors**.
+* **Homogeneous Second-Order Linear Recurrence with Constant Coefficients**: An equation of the form $ax(n) + bx(n - 1) + cx(n - 2) = 0$, where $a$, $b$, and $c$ are fixed real numbers.
+* **Inhomogeneous Recurrence**: A recurrence relation where the **right-hand side is not zero**.
+* **Profiling**: An empirical analysis tool that measures the **time spent on different segments** of a program to identify bottlenecks.
+* **Pseudorandom Numbers**: Numbers generated by a computer algorithm that **appear random** but are actually deterministic.
+* **Scatterplot**: A graphical presentation of experimental data using **points in a Cartesian coordinate system**.
+* **Algorithm Visualization**: The use of **images to convey information** about an algorithm's operation or performance.
+* **Static Algorithm Visualization**: The use of a **series of still images** to show an algorithm's progress.
+* **Dynamic Algorithm Visualization (Algorithm Animation)**: A **continuous, movie-like presentation** of an algorithm’s operations.
+* **Brute Force**: A **straightforward approach** to solving a problem, usually directly based on the problem statement and the definitions of the concepts involved.
+* **Selection Sort**: A sorting algorithm that works by **scanning a list to find its smallest element** and exchanging it with the first element, then repeating this process for the remaining $n-1$ elements until the list is ordered.
+* **Bubble Sort**: A sorting algorithm that **compares adjacent elements** of a list and exchanges them if they are out of order; this process is repeated to "bubble up" the largest elements to their final positions.
+* **Text**: A string of $n$ characters in which a string-matching algorithm searches for a specific substring.
+* **Pattern**: A string of $m$ characters ($m \le n$) that the algorithm **seeks to find within a longer text**.
+* **String Matching**: The problem of finding an occurrence of a **pattern within a text**, specifically finding the index of the leftmost character of the first matching substring.
+* **Convex Set**: A set of points in a plane where, for any two points $p$ and $q$ in the set, the **entire line segment connecting them** belongs to the set.
+* **Convex Hull**: The **smallest convex set** that contains a given set of points $S$.
+* **Extreme Point**: A point in a convex set that is **not a middle point** of any line segment with endpoints in that set; these points serve as the vertices of a convex hull.
+* **Exhaustive Search**: A brute-force approach specifically for **combinatorial problems** that involves generating every element of the problem domain, selecting those that satisfy constraints, and finding an element that **optimizes the objective function**.
+* **Hamiltonian Circuit**: A cycle in a graph that **passes through every vertex exactly once**.
+* **Traveling Salesman Problem (TSP)**: The task of finding the **shortest tour** through $n$ cities that visits every city exactly once before returning to the starting city.
+* **Knapsack Problem**: The problem of finding the **most valuable subset of items** that fit into a knapsack of a given capacity $W$, based on the items' weights and values.
+* **Assignment Problem**: The problem of assigning $n$ people to $n$ jobs in a one-to-one fashion so that the **total cost of the assignment is minimized**.
+* **Depth-First Search (DFS)**: A graph traversal algorithm that starts at an arbitrary vertex and explores as far as possible along each branch before **backtracking**.
+* **Tree Edge (DFS)**: An edge in a DFS forest used to reach a **previously unvisited vertex** for the first time.
+* **Back Edge (DFS)**: An edge that connects a vertex to one of its **ancestors** in a DFS tree, other than its immediate parent.
+* **Articulation Point**: A vertex in a connected graph whose removal, along with all incident edges, **breaks the graph into disjoint pieces**.
+* **Breadth-First Search (BFS)**: A graph traversal algorithm that visits all vertices adjacent to a starting vertex first, then all unvisited vertices **two edges apart**, and so on.
+* **Tree Edge (BFS)**: An edge used by a BFS traversal to reach a **previously unvisited vertex**.
+* **Cross Edge (BFS)**: An edge in a BFS forest that connects a vertex to a previously visited vertex that is **not its ancestor**.
+* **Decrease-and-conquer**: A general algorithm design technique based on exploiting the relationship between a solution to a given instance of a problem and a solution to its **smaller instance**.
+* **Incremental approach**: A bottom-up variation of the decrease-and-conquer technique, usually implemented **iteratively**.
+* **Decrease-by-a-constant**: A variation where the size of an instance is reduced by the **same constant** (typically one) on each iteration of the algorithm.
+* **Decrease-by-a-constant-factor**: A technique that suggests reducing a problem instance by the **same constant factor** (usually two) on each iteration.
+* **Variable-size-decrease**: A variety where the **size-reduction pattern varies** from one iteration to another.
+* **Straight insertion sort (Insertion sort)**: An algorithm that sorts an array by taking an element and **inserting it into its appropriate position** among previously sorted elements.
+* **Inversion**: A pair $(A[i], A[j])$ in an array where $i < j$ but **$A[i] > A[j]$**.
+* **Shellsort**: A sorting algorithm that applies insertion sort to **interleaving sublists** formed by a decreasing sequence of increments.
+* **Directed graph (Digraph)**: A graph where every edge has a **specified direction**.
+* **Directed cycle**: A sequence of three or more vertices starting and ending at the same vertex where every vertex is connected to its predecessor by a **directed edge**.
+* **DAG**: An acronym for a **directed acyclic graph**.
+* **Topological sorting**: The problem of ordering the vertices of a dag so that for every edge, the **starting vertex is listed before the ending vertex**.
+* **Source**: A vertex in a directed graph that has **no incoming edges**.
+* **Strongly connected digraph**: A digraph where a **directed path exists** between every pair of distinct vertices in both directions.
+* **Strongly connected components**: The **maximal subsets of vertices** in a digraph that are mutually accessible via directed paths.
+* **Tree edges**: Edges in a DFS forest used to reach **previously unvisited vertices**.
+* **Back edges**: Edges connecting a vertex to one of its **ancestors** in the DFS tree.
+* **Forward edges**: Edges connecting a vertex to its **descendants** other than its children.
+* **Cross edges**: Edges that connect vertices that do not have an **ancestor-descendant relationship**.
+* **Minimal-change requirement**: A condition where each generated combinatorial object differs from its predecessor by only a **minimal amount**, such as an exchange of two elements.
+* **Mobile element**: An element $k$ in an arrow-marked permutation whose arrow points to an **adjacent smaller number**.
+* **Johnson-Trotter algorithm**: A specific minimal-change algorithm used to **generate permutations**.
+* **Lexicographic order**: The order in which items would appear in a **dictionary**.
+* **Power set**: The set consisting of **all subsets** of a given set.
+* **Squashed order**: A subset ordering where any subset involving a specific element $a_j$ appears only **after all subsets involving previous elements**.
+* **Binary reflected Gray code**: A minimal-change sequence of bit strings where each string differs from the next by **exactly one bit**.
+* **Binary search**: A decrease-by-half algorithm for searching in a **sorted array** by comparing the key to the middle element.
+* **Selection problem**: The task of finding the **$k$th smallest element** in a list of $n$ numbers.
+* **$k$th order statistic**: The value obtained by solving the **selection problem** for a given $k$.
+* **Median**: The middle value of a list, defined as the **$\lceil n/2 \rceil$th smallest element**.
+* **Partitioning**: The process of rearranging a list around a **pivot** value $p$ so that elements $\le p$ are on one side and elements $\ge p$ are on the other.
+* **Pivot**: The value (often the first element) used to **split an array** during partitioning.
+* **Lomuto partitioning**: A partitioning scheme that uses a **one-directional scan**.
+* **Quickselect**: A recursive, **partition-based algorithm** used to solve the selection problem.
+* **Interpolation search**: A search algorithm for sorted arrays that estimates the key's position by assuming the values **increase linearly**.
+* **Winning position**: A game state from which a player has a **strategy to win** regardless of the opponent's moves.
+* **Losing position**: A game state where **every move** leads to a winning position for the opponent.
+* **Nim sum (binary digital sum)**: The sum of binary digits **discarding any carry**.
+* **Divide-and-Conquer**: A general algorithm design technique that works by **dividing a problem into several subproblems** of the same type (ideally of equal size), **solving them recursively**, and then **combining their solutions** to solve the original problem.
+* **General Divide-and-Conquer Recurrence**: A recurrence relation typically of the form **$T(n) = aT(n/b) + f(n)$**, where $a \ge 1$ and $b > 1$ are constants and $f(n)$ represents the time spent dividing the instance and combining solutions.
+* **Master Theorem**: A mathematical theorem that provides the **order of growth** for solutions to the general divide-and-conquer recurrence.
+* **Pairwise Summation**: A divide-and-conquer algorithm for computing the sum of $n$ numbers that may **reduce accumulated round-off errors**.
+* **Mergesort**: A sorting algorithm that **divides an array into two halves**, sorts each recursively, and then **merges** the two sorted halves into a single sorted array.
+* **Merging**: The process of **combining two sorted arrays** into one by repeatedly comparing their first elements and copying the smaller one into a new array.
+* **Multiway Mergesort**: A variation of mergesort that **divides a list into more than two parts** to be sorted and merged.
+* **Quicksort**: A sorting algorithm that **partitions input elements by value** relative to a preselected **pivot**, then recursively sorts the resulting subarrays.
+* **Pivot**: An element used to **partition a subarray** so that all elements to its left are $\le$ the pivot and all elements to its right are $\ge$ the pivot.
+* **Randomized Quicksort**: A version of quicksort that uses a **random element** as a pivot.
+* **Median-of-Three Method**: A strategy for pivot selection that uses the **median of the leftmost, rightmost, and middle elements** of an array.
+* **Binary Tree**: A set of nodes that is **either empty or consists of a root** and two disjoint binary trees called the **left and right subtrees**.
+* **Internal Nodes**: The **original nodes** of a binary tree, typically represented as circles in diagrams.
+* **External Nodes**: Special nodes (represented as squares) that **replace empty subtrees** to facilitate analysis.
+* **Full Binary Tree**: A nonempty binary tree in which **every node has either zero or two children**.
+* **Preorder Traversal**: A tree traversal where the root is visited **before** the left and right subtrees.
+* **Inorder Traversal**: A tree traversal where the root is visited **after** the left subtree but **before** the right subtree.
+* **Postorder Traversal**: A tree traversal where the root is visited **after** both the left and right subtrees.
+* **Strassen’s Matrix Multiplication**: An algorithm that multiplies two $n \times n$ matrices using a divide-and-conquer approach that requires **only seven multiplications** (instead of eight) for each $2 \times 2$ matrix.
+* **Quickhull**: A divide-and-conquer algorithm for the **convex-hull problem** that is named for its similarity to the quicksort algorithm.
+* **Upper Hull**: The portion of the convex hull boundary that forms a **polygonal chain from the leftmost to the rightmost point** "above" the connecting line.
+* **Lower Hull**: The portion of the convex hull boundary that forms a **polygonal chain from the leftmost to the rightmost point** "below" the connecting line.
+* **Transform-and-Conquer**: A group of design methods that work by first modifying a problem's instance in a transformation stage and then solving it in a conquering stage.
+* **Instance Simplification**: A variation of the technique where an instance is transformed into a simpler or more convenient version of the **same problem**.
+* **Representation Change**: A variation where the **representation** of a problem’s instance is changed to another representation of that same instance.
+* **Problem Reduction**: The most radical variation, where a problem is transformed into an **entirely different problem** for which an algorithm is already available.
+* **Presorting**: The practice of **sorting a list's elements first** to make questions about that list (such as searching or finding uniqueness) easier to answer.
+* **Mode**: The value that **occurs most often** in a given list of numbers.
+* **Gaussian Elimination**: The classic algorithm for solving systems of linear equations by transforming them into an equivalent system with an **upper-triangular coefficient matrix**.
+* **Upper-Triangular Matrix**: A matrix in which all elements **below the main diagonal are zeros**.
+* **Back Substitutions**: The process of solving a system with an upper-triangular matrix by finding the value of the last variable first and then **substituting it backward** through the equations.
+* **Elementary Operations**: Operations that **preserve a system's solution**, such as exchanging equations, multiplying by a nonzero constant, or adding a multiple of one equation to another.
+* **Pivot**: The coefficient used in an iteration of Gaussian elimination to **eliminate variables** in the equations below it.
+* **Partial Pivoting**: A modification to Gaussian elimination where the algorithm always selects the row with the **largest absolute value** in the current column to serve as the pivot, helping to minimize round-off errors.
+* **LU Decomposition**: A byproduct of Gaussian elimination where a matrix $A$ is factored into a **lower-triangular matrix $L$** and an **upper-triangular matrix $U$**.
+* **Matrix Inverse**: For a nonsingular $n \times n$ matrix $A$, this is a unique matrix $A^{-1}$ such that **$AA^{-1}$ equals the identity matrix $I$**.
+* **Singular Matrix**: A square matrix that **does not have an inverse**.
+* **Determinant**: A number associated with a square matrix; it can be computed efficiently by transforming the matrix into upper-triangular form and **multiplying its main diagonal elements**.
+* **Cramer’s Rule**: A theoretical method for solving linear systems using **determinants**.
+* **Self-Balancing Tree**: A search tree that automatically **restructures itself** to maintain a logarithmic height, avoiding the worst-case degeneracy of standard binary search trees.
+* **AVL Tree**: A binary search tree where the **balance factor** of every node (the height difference between its left and right subtrees) is either 0, +1, or -1.
+* **Rotation**: A local transformation of a search tree's subtrees used to **restore balance** after an insertion or deletion.
+* **2-3 Tree**: A perfectly balanced search tree that allows nodes to be either **2-nodes** (one key, two children) or **3-nodes** (two ordered keys, three children), with all leaves at the same level.
+* **Heap**: An **essentially complete binary tree** in which the key in each node is greater than or equal to the keys in its children (the **parental dominance** property).
+* **Priority Queue**: An abstract data type for a multiset of items with priorities, where the principal operations are **adding new items** and **finding/deleting the item with the highest priority**.
+* **Heapsort**: A sorting algorithm that works in two stages: first **constructing a heap** from an array, and then **successively deleting the root** (the largest element) to produce a sorted list.
+* **Horner’s Rule**: An optimal algorithm for **evaluating a polynomial** at a given point by successively factoring out $x$.
+* **Synthetic Division**: A division algorithm that uses the intermediate numbers from Horner’s rule to find the **quotient and remainder** of a polynomial divided by $(x - x_0)$.
+* **Binary Exponentiation**: Methods for computing $a^n$ that utilize the **binary representation** of the exponent $n$, processed either from left to right or right to left.
+* **Least Common Multiple (lcm)**: The smallest integer **divisible by two given positive integers** $m$ and $n$.
+* **Maximization/Minimization Problems**: Optimization problems that can be **reduced to each other** using the formula $\min f(x) = -\max[-f(x)]$.
+* **Linear Programming**: The problem of **optimizing a linear function** of several variables subject to linear constraints.
+* **Simplex Method**: The classic algorithm for linear programming that moves through **adjacent extreme points** of a feasible region.
+* **State-Space Graph**: A graph where vertices represent **possible states** of a problem and edges indicate **permitted transitions**, used to reduce puzzles to path-finding problems.
+* **Input enhancement**: A strategy that involves **preprocessing a problem's input**, in whole or in part, to store additional information that can be used later to accelerate the algorithm.
+* **Prestructuring**: A technique that uses **extra space to facilitate faster and/or more flexible access to data** by organizing it into a specific structure.
+* **Comparison-counting sort**: An algorithm that sorts by **counting the total number of elements smaller than each element** in a list and using these counts to place elements directly into their final positions in a new sorted list.
+* **Distribution counting**: A sorting algorithm for lists where keys come from a **known small set of values**; it computes the frequency and accumulated distribution of these values to determine the correct placement of each item.
+* **Horspool’s algorithm**: A simplified version of the Boyer-Moore algorithm that uses a **precomputed shift table** based on the character of the text currently aligned with the pattern's last character to determine how far the pattern can be shifted.
+* **Boyer-Moore algorithm**: A string-matching algorithm that **compares characters right-to-left** and employs two tables to determine shifts: one based on the text character that caused a mismatch and another based on the part of the pattern already matched.
+* **Bad-symbol shift**: A shift in the Boyer-Moore algorithm determined by the **text character that caused a mismatch** with its counterpart in the pattern.
+* **Good-suffix shift**: A shift in the Boyer-Moore algorithm guided by a **successful match of the last $k$ characters** of the pattern.
+* **Hashing**: A method for implementing dictionaries by **mapping keys into a one-dimensional array** called a hash table.
+* **Hash table**: The **array structure used in hashing** where records or keys are stored.
+* **Hash function**: A function that **assigns a hash address** (an integer between 0 and $m-1$) to each key.
+* **Hash address**: The specific **integer value produced by a hash function** that identifies a location within the hash table.
+* **Collision**: An event occurring when **two or more distinct keys are assigned the same hash address** by a hash function.
+* **Open hashing (Separate chaining)**: A collision resolution scheme where **keys are stored in linked lists** attached to the cells of the hash table.
+* **Closed hashing (Open addressing)**: A scheme where **all keys are stored within the hash table itself** by searching for an alternative empty cell when a collision occurs.
+* **Load factor ($\alpha$)**: The **ratio of the number of keys $n$ to the hash table size $m$**, which significantly impacts the efficiency of hashing operations.
+* **Linear probing**: The simplest version of closed hashing, which **checks the cell following a collision site** and continues checking subsequent cells until an empty one is found.
+* **Clustering**: A drawback of linear probing where **sequences of contiguously occupied cells form**, leading to reduced performance as the table fills up.
+* **Double hashing**: A collision resolution strategy that uses a **second hash function** to determine a fixed increment for a probing sequence.
+* **Rehashing**: The process of **moving all keys from an old hash table into a larger one** to maintain efficiency when the table becomes too crowded.
+* **Extendible hashing**: A variation of hashing designed for **large dictionaries on disks**, where the hash value points to a disk address of a "bucket" that can hold multiple keys.
+* **Index**: A data organization device that **provides information about the physical location of records** based on their key values.
+* **B-tree**: A **perfectly balanced search tree** that allows nodes to contain multiple keys and is used to minimize disk accesses when managing large data sets.
+* **B+-tree**: A common variation of the B-tree where **all data records are stored at the leaf level** and the upper levels serve exclusively as an index.
+* **Dynamic Programming**: The term "programming" here refers to **"planning"** and does not relate to computer programming. It is typically used for optimization problems where subproblems overlap.
+* **Principle of Optimality**: This principle states that an **optimal solution** to any instance of an optimization problem is composed of **optimal solutions to its subinstances**.
+* **Memory Functions**: A variation that combines the strengths of top-down and bottom-up approaches. It solves a problem in a **top-down manner** but maintains a table to record results, ensuring each subproblem is solved only once.
+* **Catalan Number**: Denoted as $c(n) = \frac{1}{n+1} \binom{2n}{n}$, this number represents the **total number of binary search trees** that can be constructed with $n$ keys.
+* **Coin-Row Problem**: A problem where the goal is to pick up the **maximum amount of money** from a row of $n$ coins, subject to the constraint that **no two adjacent coins** can be selected.
+* **Change-Making Problem**: The task of giving change for an amount $n$ using the **minimum number of coins** from a set of available denominations.
+* **Coin-Collecting Problem**: A scenario where a robot must collect the **maximum number of coins** on an $n \times m$ board by moving only one cell to the right or one cell down.
+* **Knapsack Problem**: Given $n$ items with known weights and values and a knapsack of capacity $W$, the goal is to find the **most valuable subset of items** that fit into the knapsack.
+* **Optimal Binary Search Tree**: A binary search tree for which the **average number of comparisons** in a successful search is the smallest possible, based on known search probabilities for each key.
+* **Transitive Closure**: An $n \times n$ boolean matrix $T$ where an element is 1 if there is a **directed path of positive length** between two vertices, and 0 otherwise.
+* **Warshall’s Algorithm**: A succinct algorithm used to compute the **transitive closure** of a directed graph.
+* **All-Pairs Shortest-Paths Problem**: The problem of finding the **shortest distances** between every pair of vertices in a weighted connected graph.
+* **Distance Matrix**: An $n \times n$ matrix where the element in the $i$th row and $j$th column indicates the **length of the shortest path** from vertex $i$ to vertex $j$.
+* **Floyd’s Algorithm**: An algorithm used to generate the **distance matrix** for all-pairs shortest paths in weighted graphs.
+* **Greedy approach**: A general design technique for optimization problems that constructs a solution through a sequence of steps, each adding a **locally optimal** piece to a partially constructed solution until a complete solution is reached.
+* **Feasible**: A characteristic of a choice that satisfies all the defined constraints of the problem.
+* **Locally optimal**: A property of a choice that is the best alternative among all feasible options currently available on a specific step.
+* **Irrevocable**: A requirement of the greedy approach stating that once a choice is made, it cannot be changed or undone in subsequent steps.
+* **Spanning tree**: A connected acyclic subgraph of an undirected connected graph that contains every vertex of the original graph.
+* **Minimum spanning tree (MST)**: A spanning tree for a weighted connected graph that has the smallest possible total weight.
+* **Weight of a tree**: The calculated sum of the weights assigned to every edge of the tree.
+* **Prim’s algorithm**: A greedy algorithm that constructs an MST by starting with a single vertex and repeatedly attaching the **nearest** vertex not yet in the tree.
+* **Fringe vertices**: Vertices that are not in the current tree but are adjacent to at least one vertex that has already been included.
+* **Unseen vertices**: Vertices of the graph that are not yet in the tree and are not adjacent to any vertices currently in the tree.
+* **Min-heap**: A complete binary tree where the key in every node is less than or equal to the keys in its children, making it useful for priority queue implementations.
+* **Kruskal’s algorithm**: A greedy algorithm that constructs an MST by selecting edges in non-decreasing order of weight, skipping any edge that would create a cycle.
+* **Disjoint subsets (ADT)**: An abstract data type representing a collection of non-overlapping sets used to maintain a dynamic partition of a finite set.
+* **Representative**: A specific element within a disjoint subset used to identify that subset.
+* **Quick find**: An implementation of disjoint subsets that optimizes the time efficiency of the **find** operation.
+* **Quick union**: An implementation of disjoint subsets that optimizes the **union** operation.
+* **Union by size**: A refinement of union-find algorithms where the smaller of two subsets is always attached to the larger one during a union operation.
+* **Union by rank**: A version of quick union that attaches a tree to the root of another based on its height.
+* **Path compression**: A modification to find operations that makes every node encountered point directly to the tree's root, improving amortized efficiency.
+* **Single-source shortest-paths problem**: The task of finding the shortest paths from a designated starting vertex to all other vertices in a weighted connected graph.
+* **Source**: The starting vertex for which shortest paths to all other vertices are computed.
+* **Shortest path**: A path between two vertices such that the sum of the weights of its edges is the smallest possible.
+* **Dijkstra’s algorithm**: A greedy algorithm that finds shortest paths by adding vertices in order of their distance from the source.
+* **Codeword**: A specific sequence of bits assigned to a symbol for encoding text.
+* **Fixed-length encoding**: A coding scheme where every symbol in an alphabet is assigned a bit string of the same length.
+* **Variable-length encoding**: A coding scheme that assigns bit strings of different lengths to different symbols, typically to save space.
+* **Prefix-free (prefix) code**: A coding scheme where no codeword is a prefix of any other codeword, allowing unambiguous decoding.
+* **Weight of a tree (Huffman)**: The sum of frequencies recorded in the leaves of a binary tree.
+* **Huffman tree**: A binary tree constructed through a greedy algorithm that minimizes the **weighted path length** from the root to its leaves.
+* **Huffman code**: An optimal prefix-free variable-length encoding scheme derived from a Huffman tree.
+* **Weighted path length**: The sum $\sum_{i=1}^{n} l_i w_i$, where $l_i$ is the length of the path from the root to leaf $i$ and $w_i$ is the weight of that leaf.
+* **Compression ratio**: A metric for the effectiveness of a compression algorithm, representing the percentage of memory saved compared to fixed-length encoding.
+* **Feasible Solution**: A point in the problem's search space that satisfies **all the constraints** of the problem.
+* **Optimal Solution**: A feasible solution that results in the **best value** (maximum or minimum) of the objective function.
+* **Feasible Region**: The set of **all feasible points** for a specific linear programming problem.
+* **Objective Function**: The linear function of several variables that the algorithm is tasked with **maximizing or minimizing**.
+* **Level Lines**: Lines defined by an equation where the objective function is equal to a **constant**.
+* **Infeasible Problem**: A linear programming problem with an **empty feasible region** due to contradictory constraints.
+* **Unbounded Problem**: A problem where the objective function can attain an **arbitrarily large value** because the feasible region is not bounded in that direction.
+* **Extreme Points**: The **vertices** of a problem’s feasible region.
+* **Standard Form**: A linear programming problem presented as a **maximization problem** where all constraints are equations with non-negative right-hand sides and all variables are non-negative.
+* **Slack Variable**: An extra variable added to a linear inequality to transform it into an **equivalent equation**.
+* **Basic Solution**: A solution to a system of $m$ equations with $n$ unknowns obtained by setting $n - m$ variables (the **nonbasic variables**) to zero and solving for the remaining $m$ variables (the **basic variables**).
+* **Basic Feasible Solution**: A basic solution where all coordinates are **non-negative**, corresponding to an extreme point of the feasible region.
+* **Simplex Tableau**: A table that stores information about the **basic feasible solution** associated with a specific extreme point.
+* **Objective Row**: The **final row** of a simplex tableau, which initially contains the coefficients of the objective function with reversed signs.
+* **Entering Variable**: A nonbasic variable selected to **become basic** in the next iteration to increase the objective function's value.
+* **Pivot Column**: The column in a simplex tableau corresponding to the **entering variable**.
+* **Departing Variable**: A basic variable that becomes **nonbasic** in the next iteration.
+* **$\theta$-ratio**: The result of dividing a row's last entry by its corresponding positive entry in the **pivot column**.
+* **Pivot Row**: The row with the **smallest $\theta$-ratio**, which determines the departing variable.
+* **Pivoting**: The transformation process used to generate a **new simplex tableau** from a current one.
+* **Cycling**: A rare phenomenon where the simplex method returns to a **previously considered extreme point**, potentially preventing the algorithm from terminating.
+* **Bland’s Rule**: A specific modification to the selection of entering and departing variables used to **eliminate the possibility of cycling**.
+* **Flow Network (Network)**: A connected weighted digraph with one **source**, one **sink**, and positive integer **edge capacities**.
+* **Source**: The unique vertex in a network with **no entering edges**.
+* **Sink**: The unique vertex in a network with **no leaving edges**.
+* **Edge Capacity**: A positive integer representing the **upper bound** on the amount of material that can be sent through a directed edge.
+* **Flow-Conservation Requirement**: The condition that the total inflow entering an intermediate vertex must **equal the total outflow** leaving it.
+* **Flow**: An assignment of numbers to edges that satisfies both **capacity and flow-conservation constraints**.
+* **Value of the Flow**: The total amount of material **leaving the source** or, equivalently, the total amount **entering the sink**.
+* **Flow-Augmenting Path**: A path from source to sink in the underlying undirected graph along which **additional flow can be sent**.
+* **Forward Edges**: Edges in a flow-augmenting path where the tail is listed **before the head**.
+* **Backward Edges**: Edges in a flow-augmenting path where the tail is listed **after the head**, allowing for flow reduction.
+* **Cut**: A set of edges induced by partitioning a network's vertices into two subsets: one containing the **source** and the other containing the **sink**.
+* **Capacity of a Cut**: The **sum of the capacities** of the edges that compose the cut.
+* **Minimum Cut**: The cut with the **smallest possible capacity** in a given network.
+* **Preflow**: A flow that satisfies capacity constraints but **violates the flow-conservation requirement**, allowing vertices to have more inflow than outflow.
+* **Bipartite Graph**: A graph whose vertices can be partitioned into **two disjoint sets** such that every edge connects a vertex from one set to a vertex in the other.
+* **Matching**: A subset of a graph's edges where **no two edges share a common vertex**.
+* **Maximum Matching (Maximum Cardinality Matching)**: A matching that contains the **largest possible number of edges**.
+* **Matched Vertex (Mate)**: A vertex that is an **endpoint of an edge** in a matching.
+* **Unmatched Vertex (Free Vertex)**: A vertex that is **not incident to any edge** in a current matching.
+* **Augmenting Path (for Matching)**: A simple path between two free vertices where the edges **alternate** between those not in the matching and those in the matching.
+* **Augmentation**: The process of **increasing the size of a matching** by swapping the matching status of edges along an augmenting path.
+* **Perfect Matching**: A matching that **includes every vertex** in the graph.
+* **Marriage Matching**: A set of $n$ pairs from two disjoint $n$-element sets (men and women) formed in a **one-to-one fashion**.
+* **Blocking Pair**: A pair $(m, w)$ who are not matched to each other but **prefer each other** over their current assigned mates.
+* **Stable Matching**: A marriage matching that has **no blocking pairs**.
+* **Unstable Matching**: A matching that contains **at least one blocking pair**.
+* **Man-Optimal Matching**: A stable matching that provides every man with the **highest-ranked woman** he could possibly have in any stable matching.
+* **Lower Bound**: An estimate on the **minimum amount of work** needed to solve a problem, which establishes a limit on the efficiency of any algorithm for that problem.
+* **Tight Lower Bound**: A bound is considered tight if there already exists an algorithm in the same **efficiency class** as the lower bound.
+* **Trivial Lower Bound**: A lower bound obtained by counting the number of **items in the input** that must be processed and the number of **output items** that must be produced.
+* **Information-Theoretic Argument**: An approach that establishes a lower bound based on the **amount of information** an algorithm must produce to resolve the uncertainty of the problem.
+* **Adversary Method**: A strategy for establishing lower bounds by imagining a **malevolent but honest adversary** who provides input responses that force the algorithm down its most time-consuming path.
+* **Problem Reduction**: A method for finding a lower bound by transforming an arbitrary instance of a problem $Q$ with a known lower bound into an instance of problem $P$; this shows $P$ is **at least as hard** as $Q$.
+* **Decision Tree**: A binary or ternary tree used to study comparison-based algorithms, where internal nodes represent **key comparisons** and leaves represent **possible outcomes**.
+* **Information-Theoretic Lower Bound**: A lower bound derived from the minimum height of a decision tree needed to accommodate all possible outcomes of a problem.
+* **Tractable**: A problem that can be solved in **polynomial time**.
+* **Intractable**: A problem that **cannot be solved** in polynomial time.
+* **Decision Problem**: A problem that requires a **yes/no answer**.
+* **Class P**: The class of all decision problems that can be solved in **polynomial time** by deterministic algorithms.
+* **Undecidable Problem**: A decision problem that **cannot be solved at all** by any algorithm.
+* **Decidable Problem**: A decision problem that **can be solved** by an algorithm.
+* **Halting Problem**: The undecidable problem of determining whether a computer program will **halt on a specific input** or run indefinitely.
+* **Nondeterministic Algorithm**: A two-stage procedure consisting of a **"guessing" stage** (generating a candidate solution) and a **"verification" stage** (a deterministic algorithm verifying if the candidate is a solution).
+* **Class NP**: The class of decision problems that can be solved by **nondeterministic polynomial** algorithms, meaning a proposed solution can be verified in polynomial time.
+* **Polynomially Reducible**: A decision problem $D_1$ is reducible to $D_2$ if there is a **polynomial-time function** that transforms all yes instances of $D_1$ to yes instances of $D_2$ and all no instances of $D_1$ to no instances of $D_2$.
+* **NP-Complete**: A decision problem that belongs to class $NP$ and to which **every other problem in NP** is polynomially reducible.
+* **CNF-Satisfiability Problem**: The problem of determining if values can be assigned to variables in a **boolean expression** in conjunctive normal form to make the expression true; it was the first known $NP$-complete problem.
+* **NP-Hard**: A class of optimization problems that are **at least as hard** as $NP$-complete problems.
+* **Numerical Analysis**: The branch of computer science concerned with algorithms for solving problems of **"continuous" mathematics**, such as integrals and nonlinear equations.
+* **Truncation Error**: Errors caused by replacing an **infinite mathematical object** (like a series) with a finite approximation.
+* **Taylor Polynomial**: A finite sum of terms from a Taylor series used to **approximate the value** of a function.
+* **Round-Off Error**: Errors caused by the **limited accuracy** with which real numbers can be represented in a digital computer.
+* **Floating-Point Number**: A scientific notation representation of real numbers in a computer, consisting of a **mantissa** and an **exponent**.
+* **Absolute Error**: The magnitude of the **difference between a value** and its approximation.
+* **Relative Error**: The absolute error **divided by the magnitude** of the exact value.
+* **Overflow**: A phenomenon where an operation yields a result **outside the range** of representable floating-point numbers.
+* **Underflow**: Occurs when a result is a nonzero fraction of **too small a magnitude** to be represented.
+* **Subtractive Cancellation**: A sharp increase in relative error that occurs when subtracting two **nearly equal** floating-point numbers.
+* **Instability**: A property of a numerical algorithm where round-off errors propagate and **increase in effect** through subsequent operations.
+* **Ill-Conditioned**: A problem that is so **sensitive to small changes** in its input that designing a stable algorithm is nearly impossible.
+* **Backtracking**: A variation of exhaustive search that constructs solutions **one component at a time** and evaluates partially constructed candidates; if a partial solution cannot be completed, the algorithm backtracks to try a different option.
+* **State-space tree**: A tree used to implement backtracking where the root represents the initial state and subsequent levels represent **choices for solution components**.
+* **Promising node**: A node in a state-space tree that corresponds to a **partially constructed solution** that may still lead to a complete solution.
+* **Nonpromising node**: A node that can be guaranteed **not to lead to a solution**.
+* **n-queens problem**: The challenge of placing $n$ queens on an $n \times n$ chessboard so that **no two queens attack each other** (i.e., they are not in the same row, column, or diagonal).
+* **Subset-sum problem**: The task of finding a subset of a given set of $n$ positive integers whose **sum is equal to a given integer** $d$.
+* **Feasible solution**: A point in the problem's search space that **satisfies all of the problem’s constraints**.
+* **Optimal solution**: A feasible solution that has the **best value for the objective function** (e.g., shortest length or highest value).
+* **Branch-and-bound**: An iterative-improvement technique for optimization problems that uses a **bound on the best possible value** of the objective function to prune nonpromising branches of the state-space tree.
+* **Live node**: A leaf of the current state-space tree that has **not yet been terminated** and may still lead to an optimal solution.
+* **Best-first branch-and-bound**: A variation that generates children of the **most promising live node** (the one with the best bound) first.
+* **Heuristic**: A **common-sense rule** based on experience used to find solutions rather than a mathematically proved assertion.
+* **Accuracy ratio**: A measure of approximation quality ($r(sa)$) calculated as $f(sa)/f(s^*)$ for minimization and $f(s^*)/f(sa)$ for maximization, where $sa$ is the approximate solution and $s^*$ is the exact solution.
+* **c-approximation algorithm**: A polynomial-time algorithm that yields an accuracy ratio **not exceeding a constant** $c$ for any instance.
+* **Performance ratio ($R_A$)**: The **smallest value of** $c$ for which an algorithm serves as a $c$-approximation algorithm for all instances of a problem.
+* **Euclidean instances**: Traveling salesman problem (TSP) instances where intercity distances satisfy **triangle inequality and symmetry**.
+* **Nearest-neighbor algorithm**: A greedy TSP algorithm that always proceeds to the **nearest unvisited city**.
+* **Multifragment-heuristic algorithm**: A greedy TSP algorithm that adds the **shortest available edges** to a set, provided they do not create a vertex of degree 3 or a premature cycle.
+* **Twice-around-the-tree algorithm**: An algorithm that creates a tour by performing a **walk around a minimum spanning tree** and using shortcuts to eliminate repeated vertices.
+* **Christofides algorithm**: A sophisticated MST-based algorithm for Euclidean TSP with a **performance ratio of 1.5**.
+* **Local search heuristics**: Iterative-improvement algorithms (such as **2-opt** and **3-opt**) that replace a few edges in a current tour with others to find a shorter one.
+* **2-change**: An operation that deletes two nonadjacent edges in a tour and **reconnects the endpoints** via a different pair of edges.
+* **Held-Karp bound**: A lower bound on the length of a shortest tour computed by **linear programming**.
+* **Approximation scheme**: A parametric family of algorithms that allows for approximations with **any predefined accuracy level**.
+* **Root isolation**: The task of identifying intervals that contain **exactly one root** of an equation.
+* **Bisection method**: A divide-and-conquer algorithm that repeatedly **halves an interval bracketing a root** until a predefined accuracy level is reached.
+* **Method of false position (regula falsi)**: An algorithm that computes root approximations as the **x-intercept of a straight line** connecting two points on the function’s graph that bracket the root.
+* **Newton’s method**: An algorithm that obtains the next root approximation as the **x-intercept of the tangent line** to the function's graph at the current point.
