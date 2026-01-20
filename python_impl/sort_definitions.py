@@ -1,26 +1,48 @@
-def load_definitions(filename):
-    with open(filename, "r", encoding="utf-8") as file:
-        lines = file.readlines()
-    definitions = [line.strip() for line in lines if line.strip() != ""]
-    return definitions
+def load_lines(filename):
+    """Load non-empty lines from a text file."""
+    with open(filename, "r", encoding="utf-8") as f:
+        return [line.strip() for line in f if line.strip()]
 
-definitions = load_definitions("../data/definitions.txt")
+def extract_term(def_line):
+    """ Extract TERM from: definitions """
+    if not def_line.startswith("* **"):
+        return None
+    end = def_line.find("**", 4)
+    if end == -1:
+        return None
+    return def_line[4:end].strip()
 
-memorized = ["Stack", "Queue"]
+# Input Taken from the files
+definitions = load_lines("../data/cleaned_definitions.txt")
+memorized_terms = set(t.lower() for t in load_lines("../data/memorized.txt"))
 
+# Split into List A which is non-memorized and List B which is memorized
 non_mem = []
 mem = []
 
 for d in definitions:
-    if d in memorized:
+    term = extract_term(d)
+    if term and term.lower() in memorized_terms:
         mem.append(d)
     else:
         non_mem.append(d)
 
-non_mem.sort()
+# Sort only the non-memorized list lexicographically by TERM
+non_mem.sort(key=lambda line: (extract_term(line) or "").lower())
 
+# Final list: sorted non-memorized first, memorized last
 final_list = non_mem + mem
 
-print("Final sorted list:")
-for d in final_list:
-    print(d)
+# OUTPUT FILE 
+out_file = "../data/sorted_definitions.txt"
+with open(out_file, "w", encoding="utf-8") as f:
+    for line in final_list:
+        f.write(line + "\n")
+
+# So Basically we are having the output file as well as Printing the result. Output file because easier to show the result during the Presentation
+# PRINT
+print(f"Wrote sorted output to: {out_file}")
+print(f"Non-memorized: {len(non_mem)} | Memorized: {len(mem)} | Total: {len(final_list)}")
+print("\nPreview (first 10 lines):")
+for line in final_list[:10]:
+    print(line)
