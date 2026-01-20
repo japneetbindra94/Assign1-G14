@@ -24,6 +24,7 @@ memorized_terms = set(t.lower() for t in load_lines("../data/memorized.txt"))
 non_mem = []
 mem = []
 
+#loop to extract terms
 for d in definitions:
     term = extract_term(d)
     if term and term.lower() in memorized_terms:
