@@ -14,6 +14,10 @@ def extract_term(def_line):
 
 # Input Taken from the files
 definitions = load_lines("../data/cleaned_definitions.txt")
+
+# Filter out anything that is not a real definition line
+definitions = [d for d in definitions if d.startswith("* **")]
+
 memorized_terms = set(t.lower() for t in load_lines("../data/memorized.txt"))
 
 # Split into List A which is non-memorized and List B which is memorized
