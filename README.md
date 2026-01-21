@@ -114,5 +114,3 @@ The full contribution history can be seen in the git commit log on the main bran
 Levitin, A. (2012). *The Design & Analysis of Algorithms* (3rd ed.). Pearson.
 
 Python Software Foundation. Python Language Reference, version 3.x. [https://www.python.org](https://www.python.org)
-
-AI Assistance: ChatGPT was used for guidance and clarification during development. All algorithm design, implementation decisions, and final code were written and verified by the authors.
