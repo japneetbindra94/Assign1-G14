@@ -95,7 +95,7 @@ This was a collaborative assignment completed by both group members using a shar
 **Japneet Kaur**
 
 * Implemented the Python sorting algorithm
-* Organized and cleaned the definitions dataset
+* Added the definitions dataset
 * Created the project structure
 * Wrote the README documentation and run instructions
 
