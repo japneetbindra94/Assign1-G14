@@ -172,11 +172,21 @@ Instead of editing the dataset to add tags (e.g., `[MEM]`), the memorized list w
 - It is easier to maintain and test different memorized lists
 - It matches the idea of “later purposes” (reusing the same dataset with different memorized terms)
 
-# 9. Conclusion
+  # 9 Justification of choices
+  I made a few design choices to keep the solution simple and easy to verify. First, I used a separate memorized.txt file
+  so the main definitions dataset stays clean and reusable, and I can update which terms are memorized later without editing
+  the definitions file. Second, I filtered the input to keep only valid definition lines (lines starting with * **) so chapter/section
+  headings are not accidentally included in sorting or output. Third, I write the final result to sorted_definitions.txt so the grader
+  can check the output directly from the repository without needing to re-run the program. Finally, I also print a short preview and
+  item counts (non-memorized, memorized, total) in the terminal, which helped with debugging and confirms that memorized terms are
+  being separated correctly and placed at the end.
+
+# 10. Conclusion
 The final program satisfies the assignment requirements by:
 - Sorting definitions lexicographically by TERM
 - Separating memorized terms into a second list that is appended after the sorted results
 - Producing a clear output file (`sorted_definitions.txt`) for easy verification
 - Using filtering to ensure only real definition lines are processed
+
 
 
